@@ -1,16 +1,18 @@
 # 4-BIT-RIPPLE-COUNTER
+# NAME.- JAGAN JP
+# REG NO.- 212224230099
 
-**AIM:**
+# AIM:
 
 To implement  4 Bit Ripple Counter using verilog and validating their functionality using their functional tables
 
-**SOFTWARE REQUIRED:**
+# SOFTWARE REQUIRED:
 
 Quartus prime
 
-**THEORY**
+# THEORY:
 
-**4 Bit Ripple Counter**
+# 4 Bit Ripple Counter
 
 A binary ripple counter consists of a series connection of complementing flip-flops (T or JK type), with the output of each flip-flop connected to the Clock Pulse input of the next higher-order flip-flop. The flip-flop holding the least significant bit receives the incoming count pulses. The diagram of a 4-bit binary ripple counter is shown in Fig. below.
 
@@ -22,19 +24,39 @@ In timing diagram Q0 is changing as soon as the negative edge of clock pulse is 
 
 ![image](https://github.com/naavaneetha/4-BIT-RIPPLE-COUNTER/assets/154305477/85e1958a-2fc1-49bb-9a9f-d58ccbf3663c)
 
-**Procedure**
+# Procedure:
 
-/* write all the steps invloved */
+ 1. Type the program in Quartus software.
+ 2. Compile and run the program.
+ 3. Generate the RTL schematic and save the logic diagram.
+ 4. Create nodes for inputs and outputs to generate the timing diagram.
+ 5. For different input combinations generate the timing diagram
 
-**PROGRAM**
+# PROGRAM:
 
-/* Program for 4 Bit Ripple Counter and verify its truth table in quartus using Verilog programming.
+```
+    
+      module bit(
+      input wire clk, 
+      output reg [3:0] count
+      );
+     always @(posedge clk) begin
+     if (count == 4'b1111) 
+          count <= 4'b0000;
+     else
+          count <= count + 1; 
+      end    
+      endmodule
 
- Developed by: RegisterNumber:
-*/
 
-**RTL LOGIC FOR 4 Bit Ripple Counter**
+```
+  
+# RTL LOGIC FOR 4 Bit Ripple Counter:
+![d12a](https://github.com/user-attachments/assets/608e0346-9f83-4922-8d16-144b75526153)
 
-**TIMING DIGRAMS FOR 4 Bit Ripple Counter**
+# TIMING DIGRAMS FOR 4 Bit Ripple Counter:
+![d12b](https://github.com/user-attachments/assets/70e39a30-0bbd-45e8-9670-9a66c177f242)
 
-**RESULTS**
+# RESULTS:
+ Thus the 4 Bit Ripple Counter using verilog is implemented and their functionality
+ using their functional tables is validated
